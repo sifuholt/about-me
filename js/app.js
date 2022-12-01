@@ -58,9 +58,9 @@ let attempt = 4;
 let myNum = 7;
 
 for(let i=0; i < attempt; i++){
-  let questionSixGuess = prompt('Please guess a number between 0 and 10');
+  let questionSixGuess = +prompt('Please guess a number between 0 and 10');
 
-  if(myNum == questionSixGuess) {
+  if(myNum === questionSixGuess) {
     alert('Wow! I can not believe you got that right so fast!');
     break;
   } else if (questionSixGuess <= 6){
@@ -71,6 +71,8 @@ for(let i=0; i < attempt; i++){
     alert('Nice tries...the number was 7!');
   }
 }
+
+
 let bookAnswer = ['three body problem', 'infinite jest', 'ulysses'];
 
 let guesses = 6;
@@ -78,7 +80,7 @@ let guesses = 6;
 for(let i=0; i < guesses; i++){
   let questionSevenGuess = prompt('How about a game? Of the books I listed, what would you think are my top three?').toLowerCase();
   for (let b = 0; b < bookAnswer.length; b++) {
-    if (questionSevenGuess == bookAnswer[b]) {
+    if (questionSevenGuess === bookAnswer[b]) {
       alert('Wow!!!...you either really know me, or are very good at guessing!');
       score++;
       i = 6;
