@@ -95,7 +95,7 @@ function questionSeven(){
   let guesses = 6;
 
   for(let i=0; i < guesses; i++){
-    let questionSevenGuess = prompt('How about a game? Of the books I listed, what would you think are my top three?').toLowerCase();
+    let questionSevenGuess = prompt('Would you like to play a game? Of the books I listed, what would you think are my top three?').toLowerCase();
     for (let b = 0; b < bookAnswer.length; b++) {
       if (questionSevenGuess === bookAnswer[b]) {
         alert('Wow!!!...you either really know me, or are very good at guessing!');
